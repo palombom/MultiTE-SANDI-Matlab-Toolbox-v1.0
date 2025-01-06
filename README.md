@@ -69,7 +69,7 @@ The code will run two steps:
 - Step 1 - Fitting SANDI to data at each TE independently
 - Step 2 - Estimating compartmental T2 relaxation times and relaxation unbiased signal fractions
 
-The output will be saved into a new folder named "MTE-SANDI_analysis" within the ProjectMainFolder.
+The output will be saved into a new folder named "MTE-SANDI_analysis" within the ProjectMainFolder. Differently from the SANDI Matlab Toolbox, this code will not process authomatically all the subjects; but it will process only sub-01/ses-01. Modify it according to your necessities.
 
 ## Citation
 If you use MTE-SANDI, please remember to cite our main SANDI work:
