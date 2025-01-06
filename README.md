@@ -3,6 +3,8 @@ Implementation of multi-TE SANDI for relaxation-diffusion MRI data analysis.
 
 This repository contains the first code for the analysis of multi echo time (multi-TE) diffusion-weighted MRI data as presented in Ting Gong, CM Tax, Matteo Mancini, Derek K Jones, Hui Zhang, Marco Palombo, "Multi-TE SANDI: Quantifying compartmental T2 relaxation times in the grey matter", 2023 International Society of Magnetic Resonance in Medicine annual meeting & exhibition, abstract: #766 (https://archive.ismrm.org/2023/0766.html).
 
+This code was created during the project: "Combined diffusion-relaxometry model fitting" (https://github.com/connecthon/2022/issues/5) in the Hackathon CONNECthon (https://connecthon.github.io/2022/), held at Cardiff University on May 2022. 
+
 For queries or suggestions on how to improve this repository, please email: palombom@cardiff.ac.uk 
 
 ## Dependencies
