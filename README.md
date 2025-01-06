@@ -6,8 +6,8 @@ This repository contains the first code for the analysis of multi echo time (mul
 For queries or suggestions on how to improve this repository, please email: palombom@cardiff.ac.uk 
 
 ## Dependencies
-A MATLAB distribution with the Parallel Computing Toolbox, the Statistics and Machine Learning Toolbox and the Optimization Toolbox. Additionally, you will also need the SANDI Matlab Toolbox (https://github.com/palombom/SANDI-Matlab-Toolbox-Latest-Release) and an external repository that is already included in the SANDI Matlab Toolbox:
-* [Tools for NIfTI and ANALYZE image] Jimmy Shen (2022). Tools for NIfTI and ANALYZE image (https://www.mathworks.com/matlabcentral/fileexchange/8797-tools-for-nifti-and-analyze-image), MATLAB Central File Exchange. Retrieved April 16, 2022.
+- A MATLAB distribution with the Parallel Computing Toolbox, the Statistics and Machine Learning Toolbox and the Optimization Toolbox.
+- The SANDI Matlab Toolbox from https://github.com/palombom/SANDI-Matlab-Toolbox-Latest-Release.
 
 ## Download 
 If you use Linux or MacOS:
