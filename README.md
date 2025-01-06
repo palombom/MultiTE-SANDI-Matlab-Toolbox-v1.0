@@ -30,39 +30,39 @@ First download the SANDI Matlab Toolbox from https://github.com/palombom/SANDI-M
 
 Then, before running the main function 'MTE_SANDI', all the data should be arranged into folders named: "Data_TEXXX", where XXX is the corresponding TE value in milliseconds. The structure of the "Data_TEXXX" is like the structure of the "ProjectMainFolder" expected by the SANDI MAtlab Toolbox, i.e.:
 
- - ProjectMainFolder
- |-> Data_TE55
-   |-> - derivatives
-       |--> - preprocessed
-            |---> - sub-01
-                  |----> - ses-01
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
-                   ...
-                  |----> - ses-n
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
-              ...
-            |---> - sub-n
-                  |----> - ses-01
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
-                     ...
-                  |----> - ses-n
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
-                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+- ProjectMainFolder
+ - Data_TE54
+  - derivatives
+    - preprocessed
+      - sub-01
+        - ses-01
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+        - ...
+        - ses-n
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+      - ...
+      - sub-n
+        - ses-01
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+        - ...
+        - ses-n
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+          - sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
 
 
 The code will run two steps: 
