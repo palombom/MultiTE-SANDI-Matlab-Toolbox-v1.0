@@ -5,6 +5,8 @@ This repository contains the first code for the analysis of multi echo time (mul
 
 This code was created during the project: "Combined diffusion-relaxometry model fitting" (https://github.com/connecthon/2022/issues/5) in the Hackathon CONNECthon (https://connecthon.github.io/2022/), held at Cardiff University on May 2022. 
 
+NOTE: this is a temporary release and as such it is not optimized and works only on one subject at a time (each subject can have multiple diffusion-weighted MRI data at different TE values). 
+
 For queries or suggestions on how to improve this repository, please email: palombom@cardiff.ac.uk 
 
 ## Dependencies
@@ -24,7 +26,50 @@ $ git clone https://github.com/palombom/MTE-SANDI.git
 5. You should now be able to use the code. 
 
 ## Usage
+First download the SANDI Matlab Toolbox from https://github.com/palombom/SANDI-Matlab-Toolbox-Latest-Release
 
+Then, before running the main function 'MTE_SANDI', all the data should be arranged into folders named: "Data_TEXXX", where XXX is the corresponding TE value in milliseconds. The structure of the "Data_TEXXX" is like the structure of the "ProjectMainFolder" expected by the SANDI MAtlab Toolbox, i.e.:
+
+ - ProjectMainFolder
+ |-> Data_TE55
+   |-> - derivatives
+       |--> - preprocessed
+            |---> - sub-01
+                  |----> - ses-01
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+                   ...
+                  |----> - ses-n
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+              ...
+            |---> - sub-n
+                  |----> - ses-01
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+                     ...
+                  |----> - ses-n
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bval
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_dwi.bvec
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_mask.nii.gz
+                         |-----> sub-<>_ses-<>_acq-<>_run-<>_desc-preproc_noisemap.nii.gz
+
+
+The code will run two steps: 
+- Step 1 - Fitting SANDI to data at each TE independently
+- Step 2 - Estimating compartmental T2 relaxation times and relaxation unbiased signal fractions
+
+The output will be saved into a new folder named "MTE-SANDI_analysis" within the ProjectMainFolder.
 
 ## Citation
 If you use MTE-SANDI, please remember to cite our main SANDI work:
