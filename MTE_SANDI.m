@@ -12,11 +12,12 @@ clc
 % Email: palombom@cardiff.ac.uk
 
 
-TE = [54, 75, 100, 125, 150]; % Vector containing the TE values acquired, in milliseconds
-Delta = 22; % diffusion gradients separation, Delta
-smalldelta = 8; % diffusion grdients duration, smalldelta
-
+% TO BE EDITED BY THE USER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+TE = []; % Vector containing the TE values acquired, in milliseconds
+Delta = ; % diffusion gradients separation, Delta, in milliseconds
+smalldelta = ; % diffusion grdients duration, smalldelta, in milliseconds
 MainDataFolder = ''; % ProjectMainFolder full path
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% First run SANDI Matlab Toolbox for each TE individually
 
