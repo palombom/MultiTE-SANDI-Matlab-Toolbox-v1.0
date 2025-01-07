@@ -16,7 +16,7 @@ TE = [54, 75, 100, 125, 150]; % Vector containing the TE values acquired, in mil
 Delta = 22; % diffusion gradients separation, Delta
 smalldelta = 8; % diffusion grdients duration, smalldelta
 
-MainDataFolder = 'C:\Users\mirko\OneDrive - Cardiff University\Desktop\CurrentWorks\MTE-SANDI\example_data';
+MainDataFolder = ''; % ProjectMainFolder full path
 
 %% First run SANDI Matlab Toolbox for each TE individually
 
@@ -25,6 +25,7 @@ MainDataFolder = 'C:\Users\mirko\OneDrive - Cardiff University\Desktop\CurrentWo
 % milliseconds. The structure of the "Data_TEXXX" is like the structure of
 % the "ProjectMainFolder" expected by the SANDI MAtlab Toolbox, i.e.:
 % - ProjectMainFolder
+% - Data_TE54
 % |-> - derivatives
 %     |--> - preprocessed
 %          |---> - sub-01
